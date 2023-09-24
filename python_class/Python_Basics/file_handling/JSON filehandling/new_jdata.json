@@ -1,0 +1,16 @@
+{
+  "people": [
+    {
+      "email": "devin@gmail.com",
+      "has_licence": true,
+      "name": "devin",
+      "phone": 1234567899
+    },
+    {
+      "email": null,
+      "has_licence": false,
+      "name": "dainty",
+      "phone": 1234444444
+    }
+  ]
+}

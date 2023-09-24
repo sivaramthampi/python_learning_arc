@@ -1,0 +1,72 @@
+{
+  "states": [
+    {
+      "name": "Alabama",
+      "areacode": [
+        "123",
+        "205",
+        "455"
+      ]
+    },
+    {
+      "name": "Alaska",
+      "areacode": [
+        "233"
+      ]
+    },
+    {
+      "name": "American Samoa",
+      "areacode": [
+        "234",
+        "566"
+      ]
+    },
+    {
+      "name": "Arizona",
+      "areacode": [
+        "239",
+        "567",
+        "888"
+      ]
+    },
+    {
+      "name": "Arkansas",
+      "areacode": [
+        "345",
+        "457"
+      ]
+    },
+    {
+      "name": "California",
+      "areacode": [
+        "444"
+      ]
+    },
+    {
+      "name": "Colorado",
+      "areacode": [
+        "777"
+      ]
+    },
+    {
+      "name": "Connecticut",
+      "areacode": [
+        "345",
+        "898"
+      ]
+    },
+    {
+      "name": "Delaware",
+      "areacode": [
+        "067"
+      ]
+    },
+    {
+      "name": "District Of Columbia",
+      "areacode": [
+        "234",
+        "456"
+      ]
+    }
+  ]
+}

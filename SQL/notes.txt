@@ -1,0 +1,85 @@
+<-----------------------SQL----------------------->
+https://dev.mysql.com/downloads/windows/installer/8.0.html
+download mysql.msi from this link
+
+There are two types of databases 
+  --> Relational databases (MySQL,Hive,POSTgreSQL)
+        o) Stored in rows and columns 
+  --> Non-Relational databases (MongoDB, Cassandra)
+        o) Stored in collection
+
+
+Relational database (structure)
+ _____________________________
+|id   |name   |Phone   |Age   |        
+|_____|_______|________|______|
+|   1 |  a    |  12    |   12 |
+|   2 |  b    |  23    |   11 |
+|   3 |  c    |  34    |   22 |
+|   4 |  d    |  45    |   23 |
+|_____|_______|________|______|
+
+
+SQL Queries
+
+To create a database --> create database <databasename>;
+To switch/select database --> use <databasename>;
+To print databases --> show databases;
+To create a Table    --> create table <tablename>(<valuedatatype> <valuekeyword>,<valuedatatype2> <valuekeyword2>)
+To show tables --> show tables;
+To print a table --> select * from tablename;
+To print 10 rows in a table --> select * from tablename limit 10;
+To print 20 data that is greater than 6 --> select * from movies where rankscore > 6 limit 20;
+To print 20 data that is greater than 6 (ascending) --> select * from movies where rankscore > 8 order by rankscore limit 20;
+To print 20 data that is greater than 6 (descending) --> select * from movies where rankscore > 8 order by desc rankscore limit 20;
+To print 20 20 that is NULL --> select * from movies where rankscore is null limit 20;
+
+
+AND 
+OR 
+NOT
+BETWEEN
+IN
+ANY 
+LIKE 
+ALL
+
+To print 20 data's which rankscore is greater than 9 and year after 2000 --> select * from movies where rankscore > 9 and year > 2000 limit 20;
+To print data that is not above year 2000 --> select * from movies where not year >=2000 limit 20;
+To print 20 data's which rankscore is greater than 9 or year after 2000 --> select * from movies where rankscore > 9 or year > 2000 limit 20;
+To print 20 data's that is in between 2000 and 2004 --> select * from movies where year between 2000 and 2004 limit 20;
+To print 20 data's which is Drama and Action --> select director_id,genre from directors_genres where genre in ("Drama","Action") limit 10;
+To print 10 data's there name starts with 'Al' --> select * from movies where name like 'Al%' limit 10;
+To print 10 data's there name ends with 'no'--> select * from movies where name like '%no' limit 10;
+To print 10 data's there name has 'no' in between --> select * from movies where name like '%ca%' limit 10;
+To print data's that begins with b and ends with f --> select * from movies where name like 'b__f';
+To print 10 data's that begins with 'B' but not ends with 'es' --> select * from movies where name like 'Be%' and name not like '%es' limit 10;
+
+
+% == WildCard Characters --> 0 or more characters
+
+COUNT 
+MAX
+MIN           --> Aggregate Functions
+SUM
+AVG
+
+To find minimum value in year --> select min(year) from movies;
+To find maximum value in year --> select min(max) from movies;
+To find count of year --> select count(max) from movies;
+To find the count of data after the year 2000 --> select count(*) from movies where year>2000;
+To find th average of year --> select avg(year) from movies;
+To find the sum of year --> select sum(year) from movies;
+
+GROUPBY
+To find total count of years based on individual year --> select year,count(year) from movies group by year limit 10;
+
+
+10/05/2023
+Find the sum and change the column name --> select sum(salary) sum from drp; 
+Group data by year and print year that is greater than 10000 --> select year,count(year) yearcount from movies group by year having yearcount>10000 limit 10;
+
+"having" --> act as an where condition
+
+Print data's that's rankscore is greater than 8 and yearcount is greater than 10 --> select year,rankscore,count(year) yearcount from movies where rankscore>8 group by year having yearcount>10 limit 10;
+
